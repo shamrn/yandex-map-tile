@@ -1,4 +1,4 @@
-import 'package:calc_tiles/widgets/calc_number_tail_widget.dart';
+import 'package:calc_tiles/widgets/forms_coordinates_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
