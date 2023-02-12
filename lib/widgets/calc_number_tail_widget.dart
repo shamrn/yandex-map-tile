@@ -38,7 +38,11 @@ class _CalcNumberTailWidgetState extends State<CalcNumberTailWidget> {
               'Рассчитать',
               style: TextStyle(fontSize: 20),
             ),
-            onPressed: () {},
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+
+              }
+            },
           ),
         ],
       ),

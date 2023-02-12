@@ -23,6 +23,12 @@ class _CoordinateFormWidgetState extends State<CoordinateFormWidget> {
       controller: widget.textController,
       autofocus: widget.autoFocus,
       keyboardType: TextInputType.number,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'Обязательное поле';
+        }
+        return null;
+      },
       decoration: InputDecoration(hintText: widget.name),
     );
   }
