@@ -8,10 +8,10 @@ class CalcNumberTail {
 
   late double _lat;
   late double _long;
-  late double _zoom;
+  late int _zoom;
 
   CalcNumberTail(
-      {required double lat, required double long, required double zoom}) {
+      {required double lat, required double long, required int zoom}) {
     _lat = lat;
     _long = long;
     _zoom = zoom;
