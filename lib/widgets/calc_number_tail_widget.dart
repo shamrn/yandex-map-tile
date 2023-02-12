@@ -13,6 +13,7 @@ class _CalcNumberTailWidgetState extends State<CalcNumberTailWidget> {
 
   final TextEditingController _latController = TextEditingController();
   final TextEditingController _longController = TextEditingController();
+  final TextEditingController _zoomController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +22,16 @@ class _CalcNumberTailWidgetState extends State<CalcNumberTailWidget> {
       child: Column(
         children: [
           CoordinateFormWidget(
-              autoFocus: true,
-              name: 'Широта',
-              textController: _latController
-          ),
+              autoFocus: true, name: 'Широта', textController: _latController),
           CoordinateFormWidget(
             autoFocus: false,
             name: 'Долгота',
             textController: _longController,
+          ),
+          CoordinateFormWidget(
+            autoFocus: false,
+            name: 'Зум',
+            textController: _zoomController,
           ),
           const SizedBox(
             height: 20,
@@ -39,9 +42,7 @@ class _CalcNumberTailWidgetState extends State<CalcNumberTailWidget> {
               style: TextStyle(fontSize: 20),
             ),
             onPressed: () {
-              if (_formKey.currentState!.validate()) {
-
-              }
+              if (_formKey.currentState!.validate()) {}
             },
           ),
         ],
