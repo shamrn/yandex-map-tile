@@ -1,4 +1,6 @@
+import 'package:calc_tiles/blocs/tail/tail_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CalcNumberTailWidget extends StatefulWidget {
   const CalcNumberTailWidget({Key? key}) : super(key: key);
@@ -41,7 +43,12 @@ class _CalcNumberTailWidgetState extends State<CalcNumberTailWidget> {
               style: TextStyle(fontSize: 20),
             ),
             onPressed: () {
-              if (_formKey.currentState!.validate()) {}
+              if (_formKey.currentState!.validate()) {
+                BlocProvider.of<TailBloc>(context).add(TailCalcEvent(
+                    lat: double.parse(_latController.text),
+                    long: double.parse(_longController.text),
+                    zoom: double.parse(_zoomController.text).toInt()));
+              }
             },
           ),
         ],
