@@ -14,7 +14,7 @@ class TailBloc extends Bloc<TailEvent, TailState> {
     CalcNumberTail calcNumberTail =
         CalcNumberTail(lat: event.lat, long: event.long, zoom: event.zoom);
 
-    String tailLink = makeLinkTail(
+    String tailLink = makeTailLink(
         x: calcNumberTail.x, y: calcNumberTail.y, zoom: event.zoom);
 
     emit(TailCalcState(

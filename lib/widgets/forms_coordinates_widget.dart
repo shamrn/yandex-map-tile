@@ -84,6 +84,13 @@ class _CoordinateFormWidgetState extends State<CoordinateFormWidget> {
         if (value == null || value.isEmpty) {
           return 'Обязательное поле';
         }
+
+        try {
+          double.parse(value);
+        } on FormatException {
+          return 'Ожидается вещественное или целое число';
+        }
+
         return null;
       },
       decoration: InputDecoration(hintText: widget.name),

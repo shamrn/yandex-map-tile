@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(40),
           child: BlocProvider(
               create: (context) => TailBloc(),
-              child: Column(
+              child: ListView(
                 children: const [
                   CalcNumberTailWidget(),
                   SizedBox(
